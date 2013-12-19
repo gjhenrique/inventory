@@ -54,35 +54,23 @@
             <a href="#">Home</a>
           </li>
         </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to fa_icon("sign-out", text: "Sair"), destroy_user_session_path, method: :delete %></li>
+          </ul>
       </div>
       <!--/.nav-collapse --> </div>
   </div>
   <div id="main-content" class="container">
     <div class="row">
       <div class="span12">
-        <%= yield %></div>
-      <!--           <div class="span3">
-      <div class="well sidebar-nav">
-        <h3>sidebar</h3>
-        <ul class="nav nav-list">
-          <li class="nav-header">sidebar</li>
-          <li>
-            <%= link_to "link1", "/path1"  %></li>
-          <li>
-            <%= link_to "link2", "/path2"  %></li>
-          <li>
-            <%= link_to "link3", "/path3"  %></li>
-        </ul>
+        <%= yield %>
       </div>
-      m/.well
     </div>
-    /span -->
-  </div>
   <!-- /row -->
   <!-- 
-       <footer>
-  <p>&copy; Company 2013</p>
-</footer>
+      <footer>
+        <p>&copy; Company 2013</p>
+      </footer>
 -->
 </div>
 <!-- /container -->
