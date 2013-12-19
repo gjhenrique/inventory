@@ -10,8 +10,8 @@
  *
  *= require_self
  *= require_tree .
+ *= require twitter/bootstrap
  */
-
-#main-content {
-    margin-top: 60px;
+.navbar .navbar-brand {
+	padding:3px 15px;
 }
