@@ -14,6 +14,9 @@
 
   <%= stylesheet_link_tag "application", :media =>
   "all" %>
+
+  <%= stylesheet_link_tag "login", :media =>
+  "all" %>
   <!-- For third-generation iPad with high-resolution Retina display: -->
   <!-- Size should be 144 x 144 pixels -->
   <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel =>
@@ -37,55 +40,8 @@
   <%= javascript_include_tag "application" %></head>
 <body>
 
-  <div class="navbar navbar-default navbar-static-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand logo" href="#"><%= image_tag "ayoshii.gif" %></a>
-      </div>
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li class="active">
-            <a href="#">Home</a>
-          </li>
-        </ul>
-      </div>
-      <!--/.nav-collapse --> </div>
-  </div>
-  <div id="main-content" class="container">
-    <div class="row">
-      <div class="span12">
-        <%= yield %></div>
-      <!--           <div class="span3">
-      <div class="well sidebar-nav">
-        <h3>sidebar</h3>
-        <ul class="nav nav-list">
-          <li class="nav-header">sidebar</li>
-          <li>
-            <%= link_to "link1", "/path1"  %></li>
-          <li>
-            <%= link_to "link2", "/path2"  %></li>
-          <li>
-            <%= link_to "link3", "/path3"  %></li>
-        </ul>
-      </div>
-      m/.well
-    </div>
-    /span -->
-  </div>
-  <!-- /row -->
-  <!-- 
-       <footer>
-  <p>&copy; Company 2013</p>
-</footer>
--->
+<div class="container">
+  <%= yield %>
 </div>
-<!-- /container -->
-
 </body>
 </html>
