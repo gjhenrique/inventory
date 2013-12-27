@@ -4,12 +4,10 @@
 
 <table class="table table-striped">
   <thead>
-    <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
+    <tr class="text-center">
+      <th><%= '#' %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:barcode) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
@@ -19,7 +17,6 @@
         <td><%= link_to item.id, item_path(item) %></td>
         <td><%= item.name %></td>
         <td><%= item.barcode %></td>
-        <td><%=l item.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_item_path(item), :class => 'btn btn-mini' %>
@@ -35,6 +32,3 @@
   </tbody>
 </table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_item_path,
-            :class => 'btn btn-primary' %>

@@ -129,10 +129,14 @@ pt-BR:
         one: ! 'Não foi possível gravar %{model}: 1 erro'
         other: ! 'Não foi possível gravar %{model}: %{count} erros.'
   helpers:
+    actions: 'Ações'
     select:
       prompt: Por favor selecione
     links:
       cancel: Cancelar
+      list: Listar
+      edit: Editar
+      destroy: Deletar
     submit:
       login: Entrar
       create: Criar %{model}
@@ -225,5 +229,8 @@ pt-BR:
       user:
         email: 'Email'
         password: 'Senha'
+      item:
+        barcode: 'Código de Barras'
+        name: 'Nome'
     errors:
       <<: *errors
