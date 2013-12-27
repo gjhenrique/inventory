@@ -132,6 +132,7 @@ pt-BR:
     select:
       prompt: Por favor selecione
     submit:
+      login: Entrar
       create: Criar %{model}
       submit: Salvar %{model}
       update: Atualizar %{model}
@@ -207,5 +208,11 @@ pt-BR:
     errors:
       <<: *errors
   activerecord:
+    models:
+      user: 'Usuário'
+    attributes:
+      user:
+        email: 'Email'
+        password: 'Senha'
     errors:
       <<: *errors
