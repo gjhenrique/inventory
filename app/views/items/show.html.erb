@@ -1,11 +1,7 @@
 <%- model_class = Item -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
-</div>
 
+<%= print_title @item.name %>
 <dl class="dl-horizontal">
-  <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
-  <dd><%= @item.name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:barcode) %>:</strong></dt>
   <dd><%= @item.barcode %></dd>
 </dl>

@@ -46,7 +46,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand logo" href="#"><%= image_tag "ayoshii.gif" %></a>
+        <!-- <a class="navbar-brand logo" href="#"> -->
+          <%= link_to(image_tag("ayoshii.gif"), root_path, class: "navbar-brand logo")  %>
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
@@ -55,24 +56,25 @@
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to fa_icon("sign-out", text: "Sair"), destroy_user_session_path, method: :delete %></li>
-          </ul>
+          <li>
+            <%= link_to fa_icon("sign-out", text: "Sair"), destroy_user_session_path, method: :delete %></li>
+        </ul>
       </div>
       <!--/.nav-collapse --> </div>
   </div>
   <div id="main-content" class="container">
     <div class="row">
       <div class="span12">
-        <%= yield %>
-      </div>
+
+        <%if content_for? :title %>
+          <div class="page-header">
+            <h1 class="text-center"><%= yield :title %></h1>
+          </div>
+        <% end %> 
+        <%= yield %></div>
     </div>
-  <!-- /row -->
-  <!-- 
-      <footer>
-        <p>&copy; Company 2013</p>
-      </footer>
--->
-</div>
+    <!-- /row -->
+  </div>
 <!-- /container -->
 
 </body>

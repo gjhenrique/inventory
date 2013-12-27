@@ -1,13 +1,8 @@
 module ApplicationHelper
 
-	def flash_message
-		messages = ""
-		[:notice, :info, :warning, :error].each {|type|
-			if flash[type]
-				messages += "<p class=\"#{type}\">#{flash[type]}</p>"
-			end
-		}
-
-		messages
+	def print_title title = ".title"
+		content_for :title do
+			t title
+		end
 	end
 end

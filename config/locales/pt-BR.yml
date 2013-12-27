@@ -117,8 +117,8 @@ pt-BR:
       odd: deve ser ímpar
       record_invalid: ! 'A validação falhou: %{errors}'
       restrict_dependent_destroy:
-        one: "Não é possível excluir o registro pois existe um %{record} dependente"
-        many: "Não é possível excluir o registro pois existem %{record} dependentes"
+        one: 'Não é possível excluir o registro pois existe um %{record} dependente'
+        many: 'Não é possível excluir o registro pois existem %{record} dependentes'
       taken: já está em uso
       too_long: ! 'é muito longo (máximo: %{count} caracteres)'
       too_short: ! 'é muito curto (mínimo: %{count} caracteres)'
@@ -131,11 +131,14 @@ pt-BR:
   helpers:
     select:
       prompt: Por favor selecione
+    links:
+      cancel: Cancelar
     submit:
       login: Entrar
       create: Criar %{model}
       submit: Salvar %{model}
       update: Atualizar %{model}
+      show: Produto
   number:
     currency:
       format:
@@ -203,6 +206,13 @@ pt-BR:
       long: ! '%d de %B de %Y, %H:%M'
       short: ! '%d de %B, %H:%M'
     pm: ''
+  items:
+    index:
+      title: 'Produtos'
+    new:
+      title: 'Novo Produto'
+    edit:
+      title: 'Editar Produto' 
   # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
   activemodel:
     errors:
@@ -210,6 +220,7 @@ pt-BR:
   activerecord:
     models:
       user: 'Usuário'
+      item: 'Produto'
     attributes:
       user:
         email: 'Email'
