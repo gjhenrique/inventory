@@ -32,3 +32,9 @@
 .app-title .page-header {
 	margin-top: 20px;
 }
+
+.user-icon {
+	font-size: 11px;
+}
+
+li:hover i[class^="icon-"] { font-size:24px; };

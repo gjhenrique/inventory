@@ -1,6 +1,12 @@
 FactoryGirl.define do
+
   factory :user do
     email 'admin@admin.com'
-    encrypted_password  User.new(password: 'admin').encrypted_password
+
+    factory :admin do 
+    	admin true 
+    end 
+
+    after(:build) { |u| u.password = 'admin'}
   end
 end
