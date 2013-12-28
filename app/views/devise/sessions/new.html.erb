@@ -5,11 +5,8 @@
 	defaults: { label: false, input_html: {class: "text-center"}}, :as =>
 	resource_name, :url => session_path(resource_name)) do |f| %>
 
-	<%= content_tag(:div, flash[:error], class: "alert alert-danger", :id => "flash_error") if flash[:error] %>
-	<%= content_tag(:div, flash[:notice], class: "alert alert-success", :id => "flash_notice") if flash[:notice] %>
-	<%= content_tag(:div, flash[:alert], class: "alert alert-warning", :id =>"flash_alert") if flash[:alert] %>
 	<div class="form-inputs">
-
+		<%= print_notification %>	
 		<%= f.input :email, placeholder: t(:email, scope: [:activerecord, :attributes, :user]), :autofocus => true %>
 		<%= f.input :password, placeholder: t(:password, scope: [:activerecord, :attributes, :user]) %></div>
 
