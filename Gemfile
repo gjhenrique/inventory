@@ -32,6 +32,7 @@ gem 'simple_form'
 gem 'bootstrap-sass-rails'
 
 gem 'devise'
+gem 'cancan'
 
 gem 'font-awesome-rails'
 
