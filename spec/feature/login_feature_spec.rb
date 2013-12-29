@@ -5,7 +5,7 @@ feature "User sign in into the system" do
   scenario "User fill form and sign in into the system" do
     user = create(:user)
 
-    fill_login_form user.email, 'admin'
+    fill_login_form user.email, user.password
 
     expect(current_path).to eq(root_path)
   end

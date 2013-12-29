@@ -137,9 +137,11 @@ pt-BR:
       list: Listar
       edit: Editar
       destroy: Deletar
+      change_password: Alterar senha
     submit:
       login: Entrar
       create: Criar %{model}
+      index: Lista de %{model}
       submit: Salvar %{model}
       update: Atualizar %{model}
       show: Produto
@@ -210,6 +212,10 @@ pt-BR:
       long: ! '%d de %B de %Y, %H:%M'
       short: ! '%d de %B, %H:%M'
     pm: ''
+  devise:
+    registrations:
+      new:
+        title: 'Novo Usuário'
   items:
     index:
       title: 'Produtos'
@@ -228,6 +234,8 @@ pt-BR:
     models:
       user: 'Usuário'
       item: 'Produto'
+    successfully:
+      created: '%{model} foi criado com sucesso'
     attributes:
       user:
         email: 'Email'

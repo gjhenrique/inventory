@@ -32,7 +32,12 @@ gem 'simple_form'
 gem 'bootstrap-sass-rails'
 
 gem 'devise'
-gem 'cancan'
+
+# Cancan does not support strong parameters of rails 4 and does not receive any updates for a good time
+# This is a hacky repository that changes the part of loading resources filter
+# Check for updates of main repository for this kind of support and switch the gems declarations
+gem 'cancan', :git => 'https://github.com/3months/cancan', :branch => 'strong_parameters'
+# gem 'cancan'
 
 gem 'font-awesome-rails'
 

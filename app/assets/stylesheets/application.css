@@ -34,7 +34,7 @@
 }
 
 .user-icon {
-	font-size: 11px;
+	font-size: 22px;
 }
 
-li:hover i[class^="icon-"] { font-size:24px; };
+li:hover i[class^="user-icon"] { font-size:36px; }

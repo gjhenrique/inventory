@@ -6,7 +6,7 @@
 	resource_name, :url => session_path(resource_name)) do |f| %>
 
 	<div class="form-inputs">
-		<%= print_notification %>	
+		<%= render "layouts/flash" %>	
 		<%= f.input :email, placeholder: t(:email, scope: [:activerecord, :attributes, :user]), :autofocus => true %>
 		<%= f.input :password, placeholder: t(:password, scope: [:activerecord, :attributes, :user]) %></div>
 

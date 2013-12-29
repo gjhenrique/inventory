@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe ItemsController do
 
-	login_user
+	login_user 
 
 	it "user exists in session" do
 		expect(subject.current_user).not_to be_nil
