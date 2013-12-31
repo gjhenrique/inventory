@@ -137,6 +137,7 @@ pt-BR:
       list: Listar
       edit: Editar
       destroy: Deletar
+      back: Voltar
     submit:
       login: Entrar
       create: Criar %{model}
