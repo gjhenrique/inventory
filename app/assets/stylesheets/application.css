@@ -37,4 +37,6 @@
 	font-size: 22px;
 }
 
-li:hover i[class^="user-icon"] { font-size:36px; }
+.has-error {
+	color: #b94a48;
+}

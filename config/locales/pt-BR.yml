@@ -137,7 +137,6 @@ pt-BR:
       list: Listar
       edit: Editar
       destroy: Deletar
-      change_password: Alterar senha
     submit:
       login: Entrar
       create: Criar %{model}
@@ -145,6 +144,9 @@ pt-BR:
       submit: Salvar %{model}
       update: Atualizar %{model}
       show: Produto
+    hints:
+      blank_password: deixe vazio se não quiser  alterar sua senha
+      current_password: precisamos de sua senha atual para confirmar essas mudanças
   number:
     currency:
       format:
@@ -216,6 +218,8 @@ pt-BR:
     registrations:
       new:
         title: 'Novo Usuário'
+      edit:
+        title: 'Edição do Usuário'
   items:
     index:
       title: 'Produtos'
@@ -240,6 +244,8 @@ pt-BR:
       user:
         email: 'Email'
         password: 'Senha'
+        password_confirmation: 'Confirmação de Senha'
+        current_password: 'Senha Atual'
       item:
         barcode: 'Código de Barras'
         name: 'Nome'
