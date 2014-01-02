@@ -1,11 +1,11 @@
- <%= simple_form_for(@item, html: {class: 'form-horizontal' }, defaults: { label_html: { class: 'col-xs-3	' }, right_col_html: { class: 'col-xs-6' } } ) do |f| %> 
+<%= simple_form_for(@item, html: {class: 'form-horizontal' }) do |f| %> 
 
 <%= f.error_notification %> 
 <%= f.input :name %>
 <%= f.input :barcode %>
 
 <div class="form-actions">
-  <%= f.submit nil, :class => 'col-xs-offset-3 btn btn-primary' %>
+  <%= f.submit  :class => 'col-xs-offset-3 btn btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")), items_path, :class => 'btn' %>
 </div>
 
