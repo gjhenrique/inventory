@@ -22,6 +22,9 @@ module ControleEstoque
     config.i18n.default_locale = "pt-BR"
     config.i18n.fallbacks = true
 
+   # config.time_zone = 'Brasilia'
+    #config.active_record.default_timezone = 'Brasilia'
+
     config.to_prepare do
         Devise::SessionsController.layout "login"
         Devise::RegistrationsController.layout proc{ |controller| user_signed_in? ? "application"   : "login" }

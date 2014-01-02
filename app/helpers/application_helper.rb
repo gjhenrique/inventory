@@ -5,4 +5,5 @@ module ApplicationHelper
 			t title
 		end
 	end
+
 end

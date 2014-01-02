@@ -9,4 +9,7 @@ class ApplicationController < ActionController::Base
     redirect_to root_url, :alert => exception.message
   end
 
+  def current_user? user
+  	user.id == current_user.id
+  end
 end

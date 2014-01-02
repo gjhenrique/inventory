@@ -58,8 +58,8 @@
           <li class="dropdown"> 
             <%= link_to fa_icon("user", class: "user-icon"), "#", class: "dropdown-toggle", data: {toggle: "dropdown"} %>
             <ul class="dropdown-menu">
-              <li> <%= link_to t("helpers.submit.create", model: User.model_name.human), new_user_registration_path if can? :create, User%> </li> 
-              <li> <%= link_to t("helpers.submit.index", model: User.model_name.human), new_user_registration_path if can? :show, User%> </li> 
+              <li> <%= link_to t("helpers.links.list"), registrations_path if can? :show, User %> </li> 
+              <li> <%= link_to t("helpers.links.create"), new_user_registration_path if can? :create, User%> </li>
               <li> <%= link_to t("helpers.links.edit"), edit_user_registration_path %> </li> 
             </ul>
           </li>

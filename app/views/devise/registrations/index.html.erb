@@ -1,0 +1,32 @@
+<% model_class = User %>
+
+<%= print_title %> 
+
+<table class="table table-striped">
+  <thead>
+    <tr class="text-center">
+      <th><%= '#' %></th>
+      <th><%= model_class.human_attribute_name(:email) %></th>
+      <th><%= model_class.human_attribute_name(:last_sign_in_at) %></th>
+      <th><%= model_class.human_attribute_name(:admin) %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.email %></td>
+        <td><%= l user.current_sign_in_at unless user.current_sign_in_at.nil? %></td>
+        <td><%= fa_icon("check") if user.admin? %>
+        <td>
+          <%= link_to fa_icon("times"),
+                      registration_path(user),
+                      :method => :delete,
+                      :data => { :confirm => t('helpers.links.confirm') },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

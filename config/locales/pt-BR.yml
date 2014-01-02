@@ -138,6 +138,8 @@ pt-BR:
       edit: Editar
       destroy: Deletar
       back: Voltar
+      confirm: Tem Certeza?
+      create: Criar
     submit:
       login: Entrar
       create: Criar %{model}
@@ -211,7 +213,7 @@ pt-BR:
   time:
     am: ''
     formats:
-      default: ! '%a, %d de %B de %Y, %H:%M:%S %z'
+      default: ! '%d/%m/%y %H:%M'
       long: ! '%d de %B de %Y, %H:%M'
       short: ! '%d de %B, %H:%M'
     pm: ''
@@ -221,6 +223,8 @@ pt-BR:
         title: 'Novo Usuário'
       edit:
         title: 'Edição do Usuário'
+      index:
+        title: 'Lista de Usuários'
   items:
     index:
       title: 'Produtos'
@@ -241,12 +245,15 @@ pt-BR:
       item: 'Produto'
     successfully:
       created: '%{model} foi criado com sucesso'
+      deleted: '%{model} foi deletado com sucesso'
     attributes:
       user:
         email: 'Email'
         password: 'Senha'
         password_confirmation: 'Confirmação de Senha'
         current_password: 'Senha Atual'
+        last_sign_in_at: 'Visto por Último'
+        admin: 'Administrador'
       item:
         barcode: 'Código de Barras'
         name: 'Nome'

@@ -4,6 +4,20 @@ class RegistrationsController < Devise::RegistrationsController
 
 	load_and_authorize_resource class: User, except: [:edit, :update]
 
+	def index
+		@users = User.all
+	end
+
+	def destroy
+		user = User.find(params[:id])
+		if current_user? user 
+			super
+		else
+			user.destroy
+			redirect_to registrations_path, notice: t("activerecord.successfully.deleted", model: User.model_name.human)
+		end
+	end
+
 	def create
 		super do |resource|
 			flash[:notice] = I18n.t('activerecord.successfully.created', model: User.model_name.human) 
