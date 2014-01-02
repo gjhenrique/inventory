@@ -23,10 +23,6 @@ describe "admin creates new user" do
 			expect_unauthorized_response
 		end
 
-		it "should update last_sign_in_at attribute" do
-			print @controller.current_user.to_yaml
-		end
-
 		def expect_unauthorized_response
 			unauthorized_message = I18n.t("unauthorized.manage.all")
 			follow_redirect!
@@ -66,6 +62,5 @@ describe "admin creates new user" do
 			follow_redirect!
 			expect(response).to render_template("layouts/login")
 		end
-
 	end	
 end
