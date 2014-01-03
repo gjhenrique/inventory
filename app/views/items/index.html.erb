@@ -1,35 +1,12 @@
-<% model_class = Item %>
-
 <%= print_title %> 
 
-<table class="table table-striped">
-  <thead>
-    <tr class="text-center">
-      <th><%= '#' %></th>
-      <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:barcode) %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @items.each do |item| %>
-      <tr>
-        <a href="#">
-        <td><%= item.id %></td>
-        <td><%= item.name %></td>
-        <td><%= item.barcode %></td>
-        <td>
-          <%= link_to fa_icon("edit"), edit_item_path(item),
-                  :class => 'btn '%>
-          <%= link_to fa_icon("times"),
-                      item_path(item),
-                      :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-mini btn-danger' %>
-        </td>
-        </a>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%= table_for @items, html: { class: "table table-stripped" } do |t| 
+  t.data actions: [:edit, :destroy] do
+    t.cell :id, heading: '#'
+    t.cell :name  
+    t.cell :barcode  
+  end
+end %>
 
 <div class="col-xs-offset-1">
   <%= link_to fa_icon("plus", text: "Novo Produto"), new_item_path %>
