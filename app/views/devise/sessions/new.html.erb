@@ -1,9 +1,9 @@
 <div class="box-login">
 	<%= link_to image_tag("ayoshii-grande.gif", class: "center-block"), "http://www.ayoshii.com.br"  %>
 
-	<%= simple_form_for(resource, html: {class: 'form-signin' }, 
-	defaults: { label: false, input_html: {class: "text-center"}}, :as =>
-	resource_name, :url => session_path(resource_name)) do |f| %>
+	<%= simple_form_for(resource, html: {class: 'form-horizontal form-signin' }, 
+	defaults: { label: false, right_col_html: {class: "col-xs-12" }, input_html: {class: "text-center"}}, :as =>
+	resource_name,  :url => session_path(resource_name)) do |f| %>
 
 	<div class="form-inputs">
 		<%= render "layouts/flash" %>	
