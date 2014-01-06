@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:gjhenrique/tabletastic.git
-  revision: 0c57c9b4c26158ff2773ad714c2ee21e25ea42c3
+  revision: b93e1492e25ab542f374aa856db8b9390291d0fb
   specs:
     tabletastic (0.2.3)
       activesupport (~> 4.0)

@@ -28,8 +28,8 @@ class ItemsController < ApplicationController
 
     respond_to do |format|
       if @item.save
-        format.html { redirect_to @item, notice: 'Item was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @item }
+        format.html { redirect_to @item, notice: I18n.t("activerecord.successfully.created", model: Item.model_name.human) }
+        format.json { render action: 'index', status: :created, location: @item }
       else
         format.html { render action: 'new' }
         format.json { render json: @item.errors, status: :unprocessable_entity }

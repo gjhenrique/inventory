@@ -14,7 +14,7 @@ class RegistrationsController < Devise::RegistrationsController
 			super
 		else
 			user.destroy
-			redirect_to registrations_path, notice: t("activerecord.successfully.deleted", model: User.model_name.human)
+			redirect_to users_path, notice: t("activerecord.successfully.deleted", model: User.model_name.human)
 		end
 	end
 

@@ -19,7 +19,7 @@ describe "admin creates new user" do
 		end 
 
 		it "should not delete any user" do
-			delete registration_path create(:user)
+			delete user_path create(:user)
 			expect_unauthorized_response
 		end
 
@@ -50,14 +50,14 @@ describe "admin creates new user" do
 		it "should delete other users" do
 			delete_message = I18n.t("activerecord.successfully.deleted", model: User.model_name.human)
 			user = create :user
-			expect { delete registration_path user }.to change(User,:count)
+			expect { delete user_path user }.to change(User,:count)
 			follow_redirect!
 			expect(response.body).to include(delete_message)
 			expect(response).to render_template("items/index")
 		end
 
 		it "should delete current user and sign out" do
-			expect { delete registration_path current_user }.to change(User,:count)
+			expect { delete user_path current_user }.to change(User,:count)
 			follow_redirect!
 			follow_redirect!
 			expect(response).to render_template("layouts/login")

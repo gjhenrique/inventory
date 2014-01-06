@@ -2,7 +2,15 @@
 
 <%= print_title %> 
 
-<table class="table table-striped">
+<%= table_for @users, html: { class: "table table-stripped" } do |t| 
+  t.data actions: [:destroy] do
+    t.cell :id, heading: '#'
+    t.cell :email  
+    t.cell(:last_sign_in_at)  { |u| l u.current_sign_in_at.localtime unless u.current_sign_in_at.nil?}
+    t.cell(:admin) {|u| fa_icon("check") if u.admin? }
+  end
+end %>
+<!-- <table class="table table-striped">
   <thead>
     <tr class="text-center">
       <th><%= '#' %></th>
@@ -30,3 +38,4 @@
   </tbody>
 </table>
 
+ -->
