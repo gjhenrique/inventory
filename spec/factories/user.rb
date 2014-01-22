@@ -3,10 +3,10 @@ FactoryGirl.define do
 	trait :password_trait do
 		"admin"
 	end
-	
+
 	factory :user do
     sequence(:email) {|n| "admin#{n}@admin.com" }
-    factory :admin do 
+    factory :admin do
     	admin true
     end
 
