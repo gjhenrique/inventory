@@ -11,11 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131228011947) do
+ActiveRecord::Schema.define(version: 20140122033320) do
 
   create_table "items", force: true do |t|
     t.string   "name"
     t.string   "barcode"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "line_items", force: true do |t|
+    t.integer  "quantity"
+    t.float    "unit_value"
+    t.float    "taxes"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
