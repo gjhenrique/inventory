@@ -20,6 +20,7 @@ rerun.txt
 pickle-email-*.html
 .project
 !.keep
+config/database.yml
 
 ### RubyMine ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode
