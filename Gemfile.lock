@@ -1,16 +1,16 @@
 GIT
-  remote: git@github.com:gjhenrique/tabletastic.git
-  revision: b93e1492e25ab542f374aa856db8b9390291d0fb
-  specs:
-    tabletastic (0.2.3)
-      activesupport (~> 4.0)
-
-GIT
   remote: https://github.com/3months/cancan
   revision: b9aa14fd51b773340e5901a6bd02ca07c765c73b
   branch: strong_parameters
   specs:
     cancan (1.6.10)
+
+GIT
+  remote: https://github.com/gjhenrique/tabletastic.git
+  revision: b93e1492e25ab542f374aa856db8b9390291d0fb
+  specs:
+    tabletastic (0.2.3)
+      activesupport (~> 4.0)
 
 GEM
   remote: https://rubygems.org/

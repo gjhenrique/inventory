@@ -32,7 +32,7 @@ gem 'bootstrap-sass-rails'
 
 gem 'devise'
 
-gem "tabletastic", git: 'git@github.com:gjhenrique/tabletastic.git'
+gem "tabletastic", git: 'https://github.com/gjhenrique/tabletastic.git'
 
 # Cancan does not support strong parameters of rails 4 and does not receive any updates for a good time
 # This is a hacky repository that changes the part of loading resources filter
