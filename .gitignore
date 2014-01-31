@@ -21,6 +21,7 @@ pickle-email-*.html
 .project
 !.keep
 config/database.yml
+/public/assets
 
 ### RubyMine ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode
