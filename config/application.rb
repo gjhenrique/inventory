@@ -25,6 +25,8 @@ module ControleEstoque
    # config.time_zone = 'Brasilia'
     #config.active_record.default_timezone = 'Brasilia'
 
+    config.assets.precompile += %w( login.css )
+
     config.to_prepare do
         Devise::SessionsController.layout "login"
         Devise::RegistrationsController.layout proc{ |controller| user_signed_in? ? "application"   : "login" }
