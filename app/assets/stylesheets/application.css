@@ -9,9 +9,10 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require twitter/bootstrap
+ *= require font-awesome
  *= require_self
  */
- @import "font-awesome";
+ /*@import "font-awesome";*/
 
 .navbar .navbar-brand {
 	padding:3px 15px;
