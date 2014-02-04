@@ -232,6 +232,12 @@ pt-BR:
       title: 'Novo Produto'
     edit:
       title: 'Editar Produto'
+  orders:
+    index:
+      title: 'Pedidos'
+    new:
+      title: 'Novo Pedido'
+
   unauthorized:
     manage:
       all: 'Não está autorizado a acessar conteúdo'
@@ -243,6 +249,8 @@ pt-BR:
     models:
       user: 'Usuário'
       item: 'Produto'
+      order: 'Pedido'
+      line_item: 'Item de Pedido'
     successfully:
       created: '%{model} foi criado com sucesso'
       deleted: '%{model} foi deletado com sucesso'
@@ -257,5 +265,10 @@ pt-BR:
       item:
         barcode: 'Código de Barras'
         name: 'Nome'
+      order:
+        barcode: 'Código de Barras'
+      line_item:
+        quantity: 'Quantidade'
+        unit_value: 'Valor Unitário'
     errors:
       <<: *errors

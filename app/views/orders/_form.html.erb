@@ -1,11 +1,19 @@
-<%= simple_form_for(@order) do |f| %>
+<%= simple_form_for(@order, html: {class: "form-horizontal"}) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
     <%= f.input :barcode %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div id="line_items">
+    <%= f.simple_fields_for :line_items, wrapper: :inline do |line_item| %>
+      <%= render 'orders/line_item_fields', f: line_item %>
+    <% end %>
   </div>
+
+  <div class="form-actions col-xs-12">
+    <%= link_to_add_association 'Adicionar Produto', f, :line_items, class: 'col-xs-offset-2 col-xs-2', :render_options =>  {wrapper: :inline }  %>
+    <%= f.button :submit, class: 'btn btn-primary' %>
+  </div>
+
 <% end %>

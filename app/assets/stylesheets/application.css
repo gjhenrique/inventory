@@ -41,3 +41,19 @@
 .has-error {
 	color: #b94a48;
 }
+
+.nested-fields {
+    margin: 20px;
+}
+
+.form-horizontal .nested-fields .form-group:before, .form-horizontal .nested-fields .form-group:after {
+    display: inline;
+}
+
+.nested-fields .form-group {
+    margin-bottom: 0
+}
+
+.red {
+    color: red;
+}

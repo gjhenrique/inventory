@@ -1,0 +1,8 @@
+<div class="nested-fields col-xs-12">
+
+  <%= f.input :quantity, as: :string, label_html: {class: 'col-xs-2'}, right_col_html: {class: 'col-xs-1'} %>
+  <%= f.input :unit_value, as: :string, label_html: {class: 'col-xs-2'}, right_col_html: {class: 'col-xs-1'} %>
+
+  <%= link_to_remove_association fa_icon('times 2x'), f, class: 'col-xs-1 red' %>
+
+</div>
