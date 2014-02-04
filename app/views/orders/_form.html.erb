@@ -12,7 +12,7 @@
   </div>
 
   <div class="form-actions col-xs-12">
-    <%= link_to_add_association 'Adicionar Produto', f, :line_items, class: 'col-xs-offset-2 col-xs-2', :render_options =>  {wrapper: :inline }  %>
+    <%= link_to_add_association t("helpers.submit.new", model: LineItem.model_name.human), f, :line_items, class: 'col-xs-offset-2 col-xs-2', :render_options =>  {wrapper: :inline }  %>
     <%= f.button :submit, class: 'btn btn-primary' %>
   </div>
 

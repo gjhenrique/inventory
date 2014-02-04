@@ -9,5 +9,5 @@
 end %>
 
 <div class="col-xs-offset-1">
-  <%= link_to fa_icon("plus", text: "Novo Produto"), new_item_path %>
+  <%= link_to fa_icon("plus", text: t("helpers.submit.new", model: Item.model_name.human)), new_item_path %>
 </div>

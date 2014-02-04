@@ -146,7 +146,8 @@ pt-BR:
       index: Lista de %{model}
       submit: Salvar %{model}
       update: Atualizar %{model}
-      show: Produto
+      show: Visualizar %{model}
+      new: Novo %{model}
     hints:
       blank_password: deixe vazio se não quiser  alterar sua senha
       current_password: precisamos de sua senha atual para confirmar essas mudanças
