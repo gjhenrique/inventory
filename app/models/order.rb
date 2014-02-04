@@ -1,7 +1,7 @@
 class Order < ActiveRecord::Base
 
-  validates_uniqueness_of :barcode, on: :create
-
+  validates_uniqueness_of :barcode
+  validates_presence_of :barcode
 
   has_many :line_items
   has_many :items, through: :line_items
